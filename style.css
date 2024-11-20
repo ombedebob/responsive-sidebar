@@ -1,0 +1,168 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-img{
+  width: 50px;
+  border-radius: 100%;
+  border: 2px solid grey;
+}
+
+.side-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 80px;
+  padding: .4rem .8rem;
+  background-color: navy;
+  transition: all 0.5s ease;
+}
+
+.side-bar.active ~ .main-content{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.side-bar.active{
+  width: 250px;
+}
+
+.side-bar #btn{
+  position: absolute;
+  color: white;
+  top: 0.4rem;
+  left: 50%;
+  font-size: 1.2rem;
+  line-height: 50px;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+.side-bar.active #btn{
+  left: 90%;
+}
+
+.side-bar .top .logo{
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.side-bar.active .top .logo{
+  opacity: 1;
+}
+
+.top .logo{
+  font-size: 1.5rem;
+  margin-right: 50px;
+}
+.user{
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.side-bar p{
+  opacity: 0;
+}
+
+.side-bar.active p{
+  opacity: 1;
+}
+
+.user p{
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.user .bold{
+  font-weight: bold;
+}
+
+.side-bar ul li{
+  position: relative;
+  list-style-type: none;
+  height: 50px;
+  width: 90%;
+  margin: 0.8rem auto;
+  line-height: 50px;
+}
+
+.side-bar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.8rem;
+}
+.side-bar ul li a:hover{
+  background-color: white;
+  color: #000;
+}
+
+.side-bar ul li a i{
+  min-width: 50px;
+  text-align: center;
+  height: 50%;
+  border-radius: 12px;
+  line-height: 50px;
+}
+
+.side-bar .nav-item{
+  opacity: 0;
+}
+
+.side-bar.active .nav-item{
+  opacity: 1;
+}
+
+.side-bar ul li .tooltip{
+  position: absolute;
+  left: 100px;
+  top:25%;
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 0 15px;
+  line-height: 2rem;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.side-bar ul li:hover .tooltip{
+  opacity: 1;
+}
+
+.side-bar.active ul li .tooltip{
+  display: none;
+}
+
+.main-content{
+  position: relative;
+  top: 0;
+  left: 80px;
+  height: 100vh;
+  width: calc(100% - 80px);
+  padding: .4rem .8rem;
+  background-color: ghostwhite;
+  transition: all 0.5s ease;
+  color: #000;
+  
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container h1{
+  font-weight: bold;
+}
